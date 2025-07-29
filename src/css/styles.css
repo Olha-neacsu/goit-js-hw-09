@@ -73,8 +73,8 @@ textarea {
   height: 40px;
 }
 
-input:focus,
-textarea:focus {
+input:focus:not(.valid),
+textarea::not(.valid) {
   border: 1px solid #000;
 }
 
@@ -93,9 +93,6 @@ textarea {
 }
 
 button {
-  display: flex;
-  justify-content: start;
-  align-items: start;
   margin-top: 16px;
   font-weight: 500;
   color: #fff;

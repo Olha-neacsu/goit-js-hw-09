@@ -43,7 +43,12 @@ form.addEventListener("submit", (event) => {
 
   form.reset();
   localStorage.removeItem(STORAGE_KEY);
-  formData = { email: "", message: "" };
+    formData = { email: "", message: "" };
+    
+    form.querySelectorAll("input, textarea").forEach(field => {
+  field.classList.remove("valid");
+});
+
 });
 
 function loadFormData() {
